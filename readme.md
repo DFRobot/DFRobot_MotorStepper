@@ -1,50 +1,51 @@
 DFRobot_Motor Library for Arduino
 ---------------------------------------------------------
 
-This library is used to control dc motors and stepper motors
-
-Including positive spin, reverse, speed adjustment, stop control
-
-### Ready to start 
- 
-    void begin();
+The library is used for controlling D.C motor and stepper motor, contains operations such as rotation, speed adjustment, brakes and so on.
     
-### Send multiple bytes to slave devices
+### The function is used for sending multible bytes
    
     void Write_Motor(unsigned char Reg ,unsigned char *buf, unsigned char Num);
 
-### Reads multiple bytes from the device
+### The function is used for reading multible bytes
    
     uint8_t Read_Motor(unsigned char Reg ,unsigned char Num );
 	
-### Open dc motor and stepper motor drive hardware
-   
-    void start();
+### Ready to start 
+ 
+    void init();
 	
-### Turn off dc motor and stepper motor drive hardware
+### Turn off drive chip of D.C motor or stepper motor 
    
     void shutdown();
 	
-### Motor stop rotation
+### Stop rotating
    
     void stop();
 	
-### Dc motor rotation direction control
-   
-    void direction(uint8_t dir);
-		
-### Speed control of dc motor and stepper motor
+### Speed regulation of D.C motor or stepper motor 
    
     void speed(uint16_t val);
-
-### Step motor rotation Angle, speed, direction control
+	val: Speed value(Stepper:8~65536 Motor:0~4096).
+	
+### D.C motor starts to work
    
-    void rotate(float angle, uint16_t speed, uint8_t dir);
-
-### Stepping motor accelerates and decelerates
+    void start(uint8_t dir);
+	dir: Direction is set(CW:positive CCW:reverse)
+	
+### Stepper motor starts to work
    
-    change_Speed(uint16_t count, uint16_t val1, uint16_t val2);  
+    void start(float angle, uint16_t speed, uint8_t dir);
+	angle：Rotation angle(0~65536).
+	speed: Setting initial velocity(8~65536)
+	dir: Direction is set(CW:positive CCW:reverse)
 
+###	Get current direction of the motor
+
+	uint8_t getDir();
+	
+	
+	
  * @file DFRobot_Motor.ino
  * @brief DFRobot's Motor Drive
  * @n This example provides DC motor and stepper motor control drive
