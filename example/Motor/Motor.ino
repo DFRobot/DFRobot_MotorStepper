@@ -42,7 +42,7 @@ void loop()
   motor2.speed(4096);
   motor3.speed(4096);
   motor4.speed(4096);
-  //Motor1 and motor3 rotate in positive direction; motor2 and motor3 rotate in reverse
+  //Motor1 and motor3 rotate in positive direction; motor2 and motor4 rotate in reverse
   motor1.start(CW);
   motor2.start(CCW);
   motor3.start(CW);

@@ -38,7 +38,6 @@ void MotorStepper::begin()
   Wire.requestFrom(_I2C_ddr_, Num);
   
   Str = Wire.read();
-  Str = Wire.read();
   Serial.print("Product ID:"); // print the character
   Serial.print(Str,HEX); // print the characters
   Serial.println(""); // print the character
@@ -257,7 +256,7 @@ void DFRobot_Stepper::start(float angle, uint16_t speed, uint8_t dir)
   unsigned char W_Data[5]={0};
   uint16_t count, _angle = angle*10; 
   if(speed<8) speed=8;
-	if(_angle*10%9<=_angle*10%18)
+	if(_angle%9<=_angle%18)
 	{
 		count=_angle/9;
 		W_Data[0] = count>>8;  W_Data[1] = count;
@@ -314,3 +313,64 @@ uint8_t DFRobot_Stepper::getDir()
 }
 
 
+
+
+void DFRobot_Stepper::changeSpeed(uint16_t count, uint16_t val1, uint16_t val2)
+{
+  int i;
+  double freq,freqMax,freqMin;
+  unsigned char W_Data[3]={0};
+  if(val1>val2)
+  {
+    freqMax = 10000/val2;
+    freqMin = 10000/val1;
+    count=count/2;
+    
+    for(i=0; i < count*2; i++)
+      {
+        if(i<count)
+        {
+          freq=freqMin+(double)(freqMax-freqMin)/(1+(double)exp((double)4*(count-i)/count));  
+        }
+        else
+        {
+          freq=freqMin+(double)(freqMax-freqMin)/(1+(double)exp(-(double)4*(i-count)/count));  
+        }
+        freq=(100/freq)*100;
+		W_Data[0] = (uint16_t)freq<<8;
+        W_Data[1] = (uint16_t)freq;
+        switch(id)
+		{
+			case SA: Write_Motor(34, W_Data, 3); break;
+			case SB: Write_Motor(35, W_Data, 3); break;	
+		}	
+		delayMicroseconds(freq*100);
+      }
+  }else{
+    freqMax = 10000/val1;
+    freqMin = 10000/val2; 
+    count=count/2;
+    
+    for(i=count*2-1; i >= 0; i--)
+      {
+        if(i>=count)
+        {
+          freq=freqMin+(double)(freqMax-freqMin)/(1+(double)exp(-(double)4*(i-count)/count));
+        }
+        else
+        {
+          freq=freqMin+(double)(freqMax-freqMin)/(1+(double)exp((double)4*(count-i)/count));
+        }
+        
+        freq=(100/freq)*100; 
+		W_Data[0] = (uint16_t)freq<<8;
+        W_Data[1] = (uint16_t)freq;
+        switch(id)
+		{
+			case SA: Write_Motor(34, W_Data, 3); break;
+			case SB: Write_Motor(35, W_Data, 3); break;	
+		}	
+		delayMicroseconds(freq*100);
+      }
+  }
+}
