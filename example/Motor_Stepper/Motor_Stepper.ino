@@ -17,6 +17,21 @@
 #include "Wire.h"
 #include "DFRobot_MotorStepper.h"
 
+/*****************Keywords instruction*****************/
+//M3--->motor_Group_3--->[M3A(+),M3B(-)]
+//M4--->motor_Group_4--->[M4A(+),M4B(-)]
+//SA--->Stepper_Group_A--->[M1A(A+),M1B(A-),M2A(B+),M2B(B-)]
+//CW: rotate in positive direction
+//CCW: rotate in reverse
+/*****************Function instruction*****************/
+//void start(float angle, uint16_t speed, uint8_t dir)
+  //*This function can be used to start the motor
+  //*angle: Set the Angle       Min:0°(If the Angle is equal to 0°,The motor will not stop spinning)
+  //*speed: Set the speed       Min:8
+  //*dir: Set Orientation       CW or CCW
+//void getDir()
+  //*This function can get the current rotation direction of the motor
+
 DFRobot_Motor motor3(M3);
 DFRobot_Motor motor4(M4);
 DFRobot_Stepper stepperA(SA);

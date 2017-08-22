@@ -11,6 +11,14 @@
 MotorStepper	KEYWORD1
 DFRobot_Motor	KEYWORD2
 DFRobot_Stepper	KEYWORD3
+M1	KEYWORD4
+M2	KEYWORD5
+M3	KEYWORD6
+M4	KEYWORD7
+SA	KEYWORD8
+SB	KEYWORD9
+CW	KEYWORD10
+CCW	KEYWORD11
 
 #######################################
 # Methods and Functions (KEYWORD1)

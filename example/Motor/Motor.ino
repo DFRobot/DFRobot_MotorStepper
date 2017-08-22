@@ -17,6 +17,23 @@
 #include "Wire.h"
 #include "DFRobot_MotorStepper.h"
 
+/*****************Keywords instruction*****************/
+//M1--->motor_Group_1--->[M1A(+),M1B(-)]
+//M2--->motor_Group_2--->[M2A(+),M1B(-)]
+//M3--->motor_Group_3--->[M3A(+),M3B(-)]
+//M4--->motor_Group_4--->[M4A(+),M4B(-)]
+//CW: rotate in positive direction
+//CCW: rotate in reverse
+/*****************Function instruction*****************/
+//void start(uint8_t dir)
+  //*This function can be used to start the motor
+  //*dir: Set Orientation       CW or CCW
+//void speed(uint16_t val)
+  //*This function is used to set the motor speed
+  //*val: Set the speed       0<=val<=4096
+//void stop()
+  //*This function is used to stop the motor turning
+  
 DFRobot_Motor motor1(M1);
 DFRobot_Motor motor2(M2);
 DFRobot_Motor motor3(M3);
@@ -37,7 +54,7 @@ void setup() {
 
 void loop() 
 {
-  //Setting initial velocity
+  //Setting initial velocity(Min:0  Max:4096)
   motor1.speed(4096);
   motor2.speed(4096);
   motor3.speed(4096);

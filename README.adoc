@@ -1,4 +1,4 @@
-DFRobot_Motor Library for Arduino
+= DFRobot_Motor Library for Arduino =
 ---------------------------------------------------------
 
 This library is used to control dc motors and stepper motors
