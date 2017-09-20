@@ -50,3 +50,7 @@ MCU                | Tested Works | Doesn't Work | Not Tested  | Notes
 FireBeetle-ESP32  |      X       |             |            | 
 FireBeetle-ESP8266  |      X       |             |            | 
 FireBeetle-BLE4.1 |      X       |             |            | 
+
+## Credits
+
+Written by lixin(1035868977@qq.com), 2017. (Welcome to our [website](https://www.dfrobot.com/))
