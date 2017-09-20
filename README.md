@@ -1,14 +1,12 @@
 # FireBeetle Covers-DC Motor&Stepper Driver
 ![SVG1](https://raw.githubusercontent.com/DFRobot/binaryfiles/master/DFR0508/DFR0508svg1.png)
 
-= DFRobot_Motor Library for Arduino =
+## DFRobot_Motor Library for Arduino
 ---------------------------------------------------------
 
-This library is used to control dc motors and stepper motors
+This library is used to control dc motors and stepper motors.Including positive spin, reverse, speed adjustment, stop control
 
-Including positive spin, reverse, speed adjustment, stop control
 
-	
 ### Open dc motor and stepper motor drive hardware, read the information.
    
     void init();
