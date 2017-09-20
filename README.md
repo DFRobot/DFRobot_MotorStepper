@@ -1,5 +1,6 @@
 # FireBeetle Covers-DC Motor&Stepper Driver
 ![SVG1](https://raw.githubusercontent.com/DFRobot/binaryfiles/master/DFR0508/DFR0508svg1.png)
+<img width="150" height="150" src="http://img.blog.csdn.net/20161028230559575"/>
 
 ## DFRobot_Motor Library for Arduino
 ---------------------------------------------------------
@@ -43,15 +44,10 @@ This library is used to control dc motors and stepper motors.Including positive 
 	
 	getDir();
 
-	
- * @file DFRobot_Motor.ino
- * @brief DFRobot's Motor Drive
- * @n This example provides DC motor and stepper motor control drive
- *
- * @copyright	[DFRobot](http://www.dfrobot.com), 2017
- * @copyright	GNU Lesser General Public License
- *
- * @author [Lixin]
- * @version  V1.0
- * @date  2017-7-31
- * @https://github.com/DFRobot/DFRobot_AT_Cmd
+## Compatibility
+
+MCU                | Tested Works | Doesn't Work | Not Tested  | Notes
+------------------ | :----------: | :----------: | :---------: | -----
+FireBeetle-ESP32  |      X       |             |            | 
+FireBeetle-ESP8266  |      X       |             |            | 
+FireBeetle-BLE4.1 |      X       |             |            | 
