@@ -1,6 +1,5 @@
 # FireBeetle Covers-DC Motor&Stepper Driver
-![SVG1](https://raw.githubusercontent.com/DFRobot/binaryfiles/master/DFR0508/DFR0508svg1.png)
-<img width="150" height="150" src="http://img.blog.csdn.net/20161028230559575"/>
+<img width="442" height="523" src="https://raw.githubusercontent.com/DFRobot/binaryfiles/master/DFR0508/DFR0508svg1.png"/>
 
 ## DFRobot_Motor Library for Arduino
 ---------------------------------------------------------
