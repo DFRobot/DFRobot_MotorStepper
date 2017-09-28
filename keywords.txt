@@ -1,0 +1,47 @@
+#######################################
+# Syntax Coloring Map For Grove - DFRobot_MotorStepper Command
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+DFRobot_MotorStepper	KEYWORD1
+DFRobot_Motor	KEYWORD1
+DFRobot_Stepper	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################	
+begin	KEYWORD2
+Write_Motor	KEYWORD2
+Read_Motor	KEYWORD2
+
+star	KEYWORD2
+shutdown	KEYWORD2
+stop	KEYWORD2
+direction	KEYWORD2
+speed	KEYWORD2
+
+start	KEYWORD2
+shutdown	KEYWORD2
+stop	KEYWORD2
+rotate	KEYWORD2
+speed	KEYWORD2
+change_Speed	KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+M1	LITERAL1
+M2	LITERAL1
+M3	LITERAL1
+M4	LITERAL1
+SA	LITERAL1
+SB	LITERAL1
+CW	LITERAL1
+CCW	LITERAL1
+A0	LITERAL1
+A1	LITERAL1
+A2	LITERAL1
+A3	LITERAL1
