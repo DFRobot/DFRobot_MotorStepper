@@ -22,7 +22,7 @@ shutdown	KEYWORD2
 stop	KEYWORD2
 direction	KEYWORD2
 speed	KEYWORD2
-
+getDir	KEYWORD2
 start	KEYWORD2
 shutdown	KEYWORD2
 stop	KEYWORD2

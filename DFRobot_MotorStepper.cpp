@@ -1,21 +1,19 @@
 /*!
  * @file DFRobot_MotorStepper.cpp
  * @brief DFRobot's Motor Drive
- * @n This example provides DC motor and stepper motor control drive
-
- * @copyright	[DFRobot](http://www.dfrobot.com), 2016
- * @copyright	GNU Lesser General Public License
- 
- * @author [LiXin]
+ * @details This example provides DC motor and stepper motor control drive
+ * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+ * @license     The MIT license (MIT)
+ * @author [fengli](li.feng@dfrobot.com)
  * @version  V1.0
- * @date  2017-7-31
+ * @date  2017-07-31
  * @https://github.com/DFRobot/DFRobot_MotorStepper
- */
-
+*/
+ 
 #include <Wire.h>
 #include"DFRobot_MotorStepper.h"
 
-motorState_t localMotor;
+sMotorState_t localMotor;
 uint8_t BeginA0 = 0;
 uint8_t BeginA1 = 0;
 uint8_t BeginA2 = 0;

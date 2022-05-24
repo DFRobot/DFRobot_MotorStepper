@@ -1,18 +1,18 @@
 /*!
- * @file Motor.ino
+ * @file motor.ino
  * @brief DFRobot's Motor Drive
- * @n The example demonstrates four groups D.C motors work together 
-	  at the same time, contains operations such as rotation, speed 
-	  adjustment, brakes and so on.
-
- * @copyright  [DFRobot](http://www.dfrobot.com), 2016
- * @copyright GNU Lesser General Public License
- 
- * @author [LiXin]
+ * @details The example demonstrates how four D.C motors work at the same time, 
+ * @n including operations such as rotation, speed 
+ * @n adjustment, brakes and so on.
+ * @copyright   Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
+ * @license     The MIT license (MIT)
+ * @author [fengli](li.feng@dfrobot.com)
  * @version  V1.0
- * @date  2017-7-31
+ * @date  2017-07-31
  * @https://github.com/DFRobot/DFRobot_MotorStepper
- */
+*/
+ 
+ 
 #include "Arduino.h"
 #include "Wire.h"
 #include "DFRobot_MotorStepper.h"
@@ -63,7 +63,7 @@ void loop()
   motor2.speed(4096);
   motor3.speed(4096);
   motor4.speed(4096);
-  //Motor1 and motor3 rotate in positive direction; motor2 and motor4 rotate in reverse
+  //Motor1 and motor3 rotate in forward direction; motor2 and motor4 rotate in a reverse direction.
   motor1.start(CW);
   motor2.start(CCW);
   motor3.start(CW);
